@@ -1,0 +1,56 @@
+---
+import type { LastTrack } from "../util/LastTrack";
+
+let lastTrack: LastTrack = {
+  name: "Loading...",
+  artist: "Loading...",
+  image: "Loading...",
+  url: "Loading...",
+  album: "Loading...",
+  nowplaying: false,
+  altText: "Loading..."
+};
+const getLastTrack = async () => {
+  const res = await fetch(
+    `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=M3IY0U&api_key=${
+      import.meta.env.LAST_API_KEY
+    }&limit=1&format=json`
+  );
+  const data = await res.json();
+  try {
+    const x = data.recenttracks.track[0];
+    lastTrack = {
+      name: x.name,
+      artist: x.artist["#text"],
+      image: x.image[3]["#text"].replace("300x300/", ""),
+      url: x.url,
+      album: x.album["#text"],
+      nowplaying: x["@attr"] ? true : false,
+      altText: `Albumcover for ${x.album["#text"]}`
+    };
+  } catch {
+    // ignored
+  }
+};
+
+await getLastTrack();
+---
+
+<script lang="ts"></script>
+<a href={lastTrack.url} target="_blank" rel="noopener noreferrer">
+  <div
+    class="flex items-center justify-between rounded-lg border border-black bg-blackAcrylic text-white backdrop-blur-[2px]"
+  >
+    <img class="h-12 w-12 p-3 invert" src="/note.svg" />
+    <div class="flex flex-col items-center justify-center p-3 text-center">
+      {
+        lastTrack.nowplaying ? (
+          <span class="text-sm">Now Playing</span>
+        ) : (
+          <span class="text-sm">Last Played</span>
+        )
+      }
+      <span>{lastTrack.artist} - {lastTrack.name}</span>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>letterboxd-bimo-edition</title>
+
+    <g id="letterboxd-decal" stroke="none" fill="none">
+        <circle id="Circle" stroke="black" stroke-width="5" cx="250" cy="250" r="240" />
+
+        <g id="Dots" transform="translate(61.000000, 180.000000)">
+            <g id="Green">
+                <ellipse fill="black" stroke-width="2" cx="189" cy="70" rx="70.0786517" ry="70" />
+            </g>
+
+            <g id="Blue" transform="translate(248.152672, 0.000000)">
+                <ellipse fill="black" stroke-width="2" cx="59.7686766" cy="70" rx="70.0786517" ry="70" />
+            </g>
+            <g id="Orange">
+                <ellipse fill="black" stroke-width="2" cx="70.0786517" cy="70" rx="70.0786517" ry="70" />
+            </g>
+        </g>
+    </g>
+</svg>

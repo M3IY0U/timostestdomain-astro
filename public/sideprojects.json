@@ -1,0 +1,17 @@
+[
+    {
+        "name": "AniGuess",
+        "desc": "A site I made inspired by wordle, guessthe.game, etc.",
+        "href": "https://aniguess.moe"
+    },
+    {
+        "name": "Various Shitposts",
+        "desc": "Personally I refer to them as audiovisual experiences™",
+        "href": "/shitposts"
+    },
+    {
+        "name": "AniList Stats Thing",
+        "desc": "A site I made to find out some stats about the stuff i watch/read (before realizing that they have exactly that section on their website already)",
+        "href": "https://m3iy0u.github.io/anistats/"
+    }
+]

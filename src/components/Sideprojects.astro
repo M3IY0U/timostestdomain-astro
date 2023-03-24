@@ -1,0 +1,52 @@
+---
+import sideprojects from "../../public/sideprojects.json";
+---
+
+<script>
+  let isOpen = false;
+
+  document.getElementById("sideprojects-headline")!.addEventListener("click", function () {
+    if (isOpen) {
+      document.getElementById("sideprojects-text")!.innerHTML = "Click to open";
+      document.getElementById("sideprojects-links")!.style.display = "none";
+      isOpen = false;
+    } else {
+      document.getElementById("sideprojects-text")!.innerHTML = "Click to close";
+      document.getElementById("sideprojects-links")!.style.display = "flex";
+      isOpen = true;
+    }
+  });
+</script>
+
+<div
+  class="my-8 flex max-w-fit flex-col self-center rounded-lg border border-black bg-blackAcrylic p-5 text-center text-white backdrop-blur-[2px]"
+>
+  <div id="sideprojects-headline" class="cursor-pointer select-none">
+    <h2>Sideprojects</h2>
+    <span id="sideprojects-text">Click to open</span>
+  </div>
+
+  <div
+    id="sideprojects-links"
+    class="flex max-w-fit flex-col items-center justify-evenly md:flex-row"
+    style="display: none;"
+  >
+    {
+      sideprojects.map((sideproject) => {
+        return (
+          <a
+            class="mx-0 my-1 rounded-lg border border-white p-2 transition duration-300 hover:backdrop-blur-sm md:h-full md:max-w-[25%]"
+            href={sideproject.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="">
+              <h3 class="underline">{sideproject.name}</h3>
+              {sideproject.desc}
+            </div>
+          </a>
+        );
+      })
+    }
+  </div>
+</div>

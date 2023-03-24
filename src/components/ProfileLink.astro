@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title: string;
+  alt: string;
+  icon: string;
+  href: string;
+  color: string;
+}
+
+const { title, alt, icon, href, color } = Astro.props;
+---
+
+<div
+  style={"background-color:" + color}
+  class="w-2/3 min-w-[150px] rounded-lg border border-black px-0.5 backdrop-blur-[2px] transition hover:brightness-75 hover:backdrop-blur-sm md:w-4/5"
+>
+  <a
+    class="flex place-content-between items-center p-3 md:place-content-center"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    title={alt}
+  >
+    <div
+      class="h-[35px] w-[35px] bg-contain bg-center bg-no-repeat invert"
+      style={`background-image: url('${icon}')`}
+    >
+    </div><span class="ml-2 text-white">{title}</span></a
+  >
+</div>
