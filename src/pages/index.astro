@@ -4,6 +4,9 @@ import LastDisplay from "../components/LastDisplay.astro";
 import ProfileLink from "../components/ProfileLink.astro";
 import Sideprojects from "../components/Sideprojects.astro";
 import links from "../../public/links.json";
+import { inject } from '@vercel/analytics';
+ 
+inject();
 ---
 
 <Layout title="timostestseite.">
