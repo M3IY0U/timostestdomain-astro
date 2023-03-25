@@ -4,8 +4,8 @@ import LastDisplay from "../components/LastDisplay.astro";
 import ProfileLink from "../components/ProfileLink.astro";
 import Sideprojects from "../components/Sideprojects.astro";
 import links from "../../public/links.json";
-import { inject } from '@vercel/analytics';
- 
+import { inject } from "@vercel/analytics";
+
 inject();
 ---
 
@@ -40,7 +40,7 @@ inject();
     <Sideprojects />
   </main>
 
-  <footer class="my-4 flex h-fit w-full justify-center">
+  <footer class="mb-14 flex h-fit w-full justify-center">
     <LastDisplay />
   </footer>
 </Layout>
