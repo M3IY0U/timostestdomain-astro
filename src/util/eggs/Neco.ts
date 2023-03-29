@@ -10,7 +10,7 @@ export function neco() {
     necoSound.load();
     document
       .querySelector("html")!
-      .setAttribute("style", "background-image: url('/neco.jpg'); filter: brightness(0.5);");
+      .setAttribute("style", "background-image: url('/neco.jpg');");
 
     console.log(`%cBurenyuu ~`, `font-size:3em;`);
   }
