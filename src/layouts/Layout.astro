@@ -17,7 +17,7 @@ const { title } = Astro.props;
       href="https://cdn.discordapp.com/emojis/1073403734392061992.webp"
     />
     <meta name="generator" content={Astro.generator} />
-    <!-- <link rel="canonical" href="https://aniguess.moe/" /> -->
+    <link rel="canonical" href="https://timostestdoma.in/" />
     <meta property="og:title" content="timostestdomain" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://timostestdoma.in/" />
@@ -25,7 +25,7 @@ const { title } = Astro.props;
       property="og:image"
       content="https://cdn.discordapp.com/attachments/493557274371948545/1088913883529486476/Looking.png"
     />
-    <!-- <meta property="og:description" content="" /> -->
+    <meta property="og:description" content="Welcome to my MySpace page" />
     <meta name="description" content="Personal website" />
     <meta name="robots" content="index, follow" />
     <title>{title}</title>
@@ -33,24 +33,33 @@ const { title } = Astro.props;
   <body class="flex h-full flex-col items-center justify-between overflow-x-hidden">
     <slot />
   </body>
+  <audio src="/reset.mp3" preload="auto" id="reset-audio"
+    >Your browser does not support the audio element.</audio
+  >
 </html>
 <script>
-  if (document.body.clientWidth >= 2560) {
-    let viewport = document.querySelector("meta[name=viewport]")!;
-    console.log(viewport);
-    viewport.setAttribute("content", "width=device-width, initial-scale=1.5");
-    console.log(viewport);
-  }
+  import { Egg } from "../util/eggs/Egg";
+  import { caramell } from "../util/eggs/Caramelldansen";
+  import { neco } from "../util/eggs/Neco";
+  import { peppino } from "../util/eggs/Peppino";
+  import { reset } from "../util/eggs/Reset";
+
+  var eggs = [];
+  eggs.push(new Egg("neco", neco, true));
+  eggs.push(new Egg("peppino", peppino, true));
+  eggs.push(new Egg("caramell", caramell, true));
+  eggs.push(new Egg("reset", reset, true));
 </script>
 <style is:global>
   @font-face {
     src: url("/Itim-Regular.ttf") format("truetype");
     font-family: "Itim";
   }
-  :root {
-  }
+
   html {
     font-family: Itim, sans-serif;
     background-color: #f6f6f6;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 1s ease-in-out;
   }
 </style>

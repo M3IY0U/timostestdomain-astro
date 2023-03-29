@@ -37,7 +37,7 @@ await getLastTrack();
 ---
 
 <script lang="ts"></script>
-<a href={lastTrack.url} target="_blank" rel="noopener noreferrer">
+<a id="last-link" href={lastTrack.url} target="_blank" rel="noopener noreferrer">
   <div
     class="flex items-center justify-between rounded-lg border border-gray-900 bg-blackAcrylic text-white backdrop-blur-[2px]"
   >
@@ -50,7 +50,7 @@ await getLastTrack();
           <span class="text-sm">Last Played</span>
         )
       }
-      <span>{lastTrack.artist} - {lastTrack.name}</span>
+      <span id="last-track">{lastTrack.artist} - {lastTrack.name}</span>
     </div>
   </div>
 </a>
