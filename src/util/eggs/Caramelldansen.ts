@@ -14,7 +14,7 @@ export async function caramell() {
   const audio = document.createElement("audio");
   audio.id = "caramell-audio";
   audio.src = "/caramelldansen.mp3";
-  audio.volume = 0.05;
+  audio.volume = 0.1;
   audio.load();
   document.querySelector("html")!.appendChild(audio);
   audio.play();
@@ -45,10 +45,14 @@ export async function caramell() {
 }
 
 export function carReset() {
-  try {
-    var caramell = document.querySelector("#caramell-audio") as HTMLAudioElement;
+  var caramells = document.querySelectorAll(
+    "[id*='caramell-audio']"
+  ) as NodeListOf<HTMLAudioElement>;
 
-    caramell.pause();
-    caramell.remove();
-  } catch {}
+  caramells.forEach((caramell) => {
+    try {
+      caramell.pause();
+      caramell.remove();
+    } catch {}
+  });
 }

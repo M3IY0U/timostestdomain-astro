@@ -6,11 +6,12 @@ export function neco() {
     necoFirstTime = false;
     necoSound = document.createElement("audio");
     necoSound.src = "/burenyuu.mp3";
-    necoSound.volume = 0.1;
-    necoSound.load();
     document
       .querySelector("html")!
-      .setAttribute("style", "background-image: url('/neco.jpg');");
+      .setAttribute(
+        "style",
+        "background-image: url('/burenyuu.svg'); background-position: center;"
+      );
 
     console.log(`%cBurenyuu ~`, `font-size:3em;`);
   }

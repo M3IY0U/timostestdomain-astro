@@ -9,7 +9,7 @@ export async function peppino() {
   scream.id = "peppino-scream";
   scream.className = `peppino${num}`;
   scream.load();
-  scream.volume = 0.1;
+  scream.volume = 0.2;
   document.querySelector("html")!.appendChild(scream);
 
   scream.play();
@@ -19,7 +19,7 @@ export async function peppino() {
   explosion.id = "peppino-explosion";
   explosion.className = `peppino${num}`;
   explosion.load();
-  explosion.volume = 0.1;
+  explosion.volume = 0.2;
   document.querySelector("html")!.appendChild(explosion);
 
   await new Promise((r) => setTimeout(r, 1500));
@@ -56,7 +56,7 @@ export async function peppino() {
 
     document.querySelector("html")!.appendChild(div);
     const sound = taunt.cloneNode() as HTMLAudioElement;
-    sound.volume = 0.1;
+    sound.volume = 0.2;
     sound.className = `peppino${num}`;
     document.querySelector("html")!.appendChild(sound);
     if (i != 9) sound.play();
