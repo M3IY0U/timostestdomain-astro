@@ -16,6 +16,8 @@ export function neco() {
     console.log(`%cBurenyuu ~`, `font-size:3em;`);
   }
 
+  document.querySelector("#image-credits")!.innerHTML =
+    "Background: La Creatura (by twarqulas#3617)";
   const sound = necoSound.cloneNode() as HTMLAudioElement;
   sound.volume = 0.2;
   sound.play();
@@ -26,5 +28,7 @@ export function necoReset() {
   if (!document.querySelector("html")!.hasAttribute("style")) return;
   necoFirstTime = true;
   document.querySelector("html")!.removeAttribute("style");
+  document.querySelector("#image-credits")!.innerHTML =
+    'Background: Last page of <a class="underline" target="_blank" rel="noopener noreferrer" href="https://mangadex.org/chapter/3994c2e6-b73e-4010-b237-c2d4d6ef07d1/10">"Memories of Emanon"</a>';
   console.clear();
 }
