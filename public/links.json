@@ -1,38 +1,37 @@
 [
-    
-    {
-        "title": "GitHub",
-        "alt": "Profile on GitHub",
-        "icon": "/github.svg",
-        "href": "https://github.com/M3IY0U",
-        "color": "rgba(0,0,0,0.5)"
-    },
-    {
-        "title": "Steam",
-        "alt": "Profile on Steam",
-        "icon": "/steam.svg",
-        "href": "https://steamcommunity.com/id/M3IY0U/",
-        "color": "rgba(0,0,0,0.5)"
-    },
-    {
-        "title": "Letterboxd",
-        "alt": "Profile on Letterboxd",
-        "icon": "/letterboxd.svg",
-        "href": "https://letterboxd.com/Meiyou/",
-        "color": "rgba(32, 40, 48,0.5)"
-    },
-    {
-        "title": "last.fm",
-        "alt": "Profile on last.fm",
-        "icon": "/last.svg",
-        "href": "https://last.fm/M3IY0U",
-        "color": "rgba(250,0,0,0.5)"
-    },
-    {
-        "title": "AniList",
-        "alt": "Profile on AniList",
-        "icon": "/anilist.svg",
-        "href": "https://anilist.co/user/Meiyou/",
-        "color": "rgba(2,169,255,0.5)"
-    }
+  {
+    "title": "GitHub",
+    "alt": "Profile on GitHub",
+    "icon": "/github.svg",
+    "href": "https://github.com/M3IY0U",
+    "color": "rgba(0,0,0,0.5)"
+  },
+  {
+    "title": "Steam",
+    "alt": "Profile on Steam",
+    "icon": "/steam.svg",
+    "href": "https://steamcommunity.com/id/M3IY0U/",
+    "color": "rgba(0,0,0,0.5)"
+  },
+  {
+    "title": "Letterboxd",
+    "alt": "Profile on Letterboxd",
+    "icon": "/letterboxd.svg",
+    "href": "https://letterboxd.com/Meiyou/",
+    "color": "rgba(32, 40, 48,0.5)"
+  },
+  {
+    "title": "last.fm",
+    "alt": "Profile on last.fm",
+    "icon": "/last.svg",
+    "href": "https://last.fm/user/M3IY0U",
+    "color": "rgba(250,0,0,0.5)"
+  },
+  {
+    "title": "AniList",
+    "alt": "Profile on AniList",
+    "icon": "/anilist.svg",
+    "href": "https://anilist.co/user/Meiyou/",
+    "color": "rgba(2,169,255,0.5)"
+  }
 ]
