@@ -4,12 +4,14 @@ export class Egg {
   callback: Function;
   #repeatable: boolean = false;
   #event;
+  hint: string;
 
-  constructor(text: string, callback: Function, repeat: boolean) {
+  constructor(text: string, callback: Function, repeat: boolean, hint: string) {
     this.#phrase = text.split("");
     this.callback = callback;
     this.#event = this.#keyDownHandler.bind(this);
     this.#repeatable = repeat;
+    this.hint = hint;
     document.addEventListener("keydown", this.#event);
   }
 

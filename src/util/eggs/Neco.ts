@@ -30,5 +30,4 @@ export function necoReset() {
   document.querySelector("html")!.removeAttribute("style");
   document.querySelector("#image-credits")!.innerHTML =
     'Background: Last page of <a class="underline" target="_blank" rel="noopener noreferrer" href="https://mangadex.org/chapter/3994c2e6-b73e-4010-b237-c2d4d6ef07d1/10">"Memories of Emanon"</a>';
-  console.clear();
 }

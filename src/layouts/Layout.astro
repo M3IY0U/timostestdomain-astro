@@ -43,12 +43,64 @@ const { title } = Astro.props;
   import { neco } from "../util/eggs/Neco";
   import { peppino } from "../util/eggs/Peppino";
   import { reset } from "../util/eggs/Reset";
+  import { iAmJustAFish } from "../util/eggs/Fish";
 
   var eggs = [];
-  eggs.push(new Egg("neco", neco, true));
-  eggs.push(new Egg("peppino", peppino, true));
-  eggs.push(new Egg("caramell", caramell, true));
-  eggs.push(new Egg("reset", reset, true));
+  eggs.push(
+    new Egg(
+      "neco",
+      neco,
+      true,
+      `
+With cat-like ears and sharp teeth too,
+This creature roams in search of you.
+You run for cover, heart racing fast,
+Praying the pipe-bomb is the last.`
+    )
+  );
+  eggs.push(
+    new Egg(
+      "peppino",
+      peppino,
+      true,
+      `
+For his pizzeria, he'll take a stand,
+To save it from destruction by a villainous hand.
+His anger and passion fuel his might,
+This Italian hero, ready to fight.`
+    )
+  );
+  eggs.push(
+    new Egg(
+      "caramell",
+      caramell,
+      true,
+      `
+With beats so sweet and oh so bright,
+This song is sure to bring delight.
+A viral hit that swept the land,
+Its name a treat, just like its brand.`
+    )
+  );
+  eggs.push(new Egg("reset", reset, true, ""));
+  eggs.push(
+    new Egg(
+      "joel",
+      iAmJustAFish,
+      true,
+      `
+In the depths of the ocean blue,
+A fish spins fast, a dazzling view.
+Its name may be a simple one,
+But this emote's fame is second to none.`
+    )
+  );
+
+  eggs
+    .filter((e) => e.hint != "")
+    .forEach((e) =>
+      console.log(`%c${e.hint}`, "font-size: 1.5rem; font-family: 'Garamond', serif;")
+    );
 </script>
 <style is:global>
   @font-face {
