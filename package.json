@@ -2,6 +2,9 @@
   "name": "timostestdomain-astro",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22.x"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,10 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^3.1.1",
-    "@astrojs/vercel": "^3.2.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/vercel": "^8.0.4",
     "@vercel/analytics": "^0.1.11",
-    "astro": "^2.1.7",
+    "astro": "^5.12.8",
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
